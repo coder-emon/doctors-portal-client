@@ -7,7 +7,7 @@ const Nav = () => {
     return (
         <div>
             <div className='flex justify-between items-center container mx-auto py-2 px-4'>
-                <h1 className='w-2/6 '>Doctors Portal</h1>
+                <h1 className='w-2/6 '><Link to="/">Doctors Portal</Link></h1>
                 <div className='w-4/6 flex justify-end relative'>
                     {isDisplay ?  <RxCross2 className='text-3xl block cursor-pointer lg:hidden'   onClick={()=> setIsDisplay(!isDisplay)}></RxCross2> :
                    <IoIosMenu className='text-3xl block cursor-pointer lg:hidden' onClick={()=> setIsDisplay(!isDisplay)}></IoIosMenu>}
