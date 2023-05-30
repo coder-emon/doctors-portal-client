@@ -27,8 +27,8 @@ const Testimonials = () => {
         },
     ]
     return (
-        <div className='py-20'>
-            <div className='container mx-auto flex justify-between items-start'>
+        <div className='py-20 px-5'>
+            <div className='container mx-auto flex justify-between items-center lg:items-start'>
                 <div>
                     <h4 className='text-secondary font-bold text-xl'>Testimonial</h4>
                     <h2 className='text-ancent  font-normal text-4xl font '>What Our Patients Says</h2>
@@ -37,7 +37,7 @@ const Testimonials = () => {
                     <img src={quote} className='w-32' alt="" />
                 </div>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container pt-36 pb-10 mx-auto gap-8 px-10'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container pt-10 lg:pt-36 lg:pb-10 mx-auto gap-8 lg:px-10'>
                 {
                     testimonialData.map(testimonial => <TestimonialItem key={testimonial.id} testimonial={testimonial}></TestimonialItem>)
                 }

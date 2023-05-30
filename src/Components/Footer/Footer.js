@@ -4,8 +4,8 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div className='bg-footer pt-12 bg-contain'>
-            <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center lg:grid-cols-3'>
-                <ul className='text-ancent font-normal flex flex-col gap-2'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:justify-items-center lg:grid-cols-3 px-5 gap-10 lg:gap-0 pb-10 lg:px-0'>
+                <ul className='text-ancent font-normal flex flex-col lg:gap-2'>
                     <li>
                         <Link className='font-bold text-gray text-xl'>Services</Link>
                     </li>
