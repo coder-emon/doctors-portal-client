@@ -58,7 +58,7 @@ const Register = () => {
                 <div className='flex flex-col items-start gap-2'>
                     <label htmlFor="password">Password</label>
                     <input type="text" id='password' {...register('password', { pattern: { value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{6}/, message: "At least 1 uppercase 1 lowercase letter 1 number and 1 special charecter required" } })} className='border-2 border-[#CFCFCF] focus:border-transparent rounded px-4 py-2 w-full lg:w-96 focus:ring-primary focus:ring-2 outline-none' />
-                    <span className='text-xs'>Forget Password</span>
+                    <label htmlFor='forget-modal' className='text-xs cursor-pointer' >Forget Password</label>
                 </div>
                 {
                     errors.password && <p>{errors.password.message}</p>

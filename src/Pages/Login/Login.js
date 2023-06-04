@@ -46,7 +46,7 @@ const Login = () => {
                 <div className='flex flex-col items-start gap-2'>
                 <label htmlFor="password">Password</label>
                 <input type="passwors" id='password' {...register('password')} className='border-2 border-[#CFCFCF] focus:border-transparent rounded px-4 py-2 w-full lg:w-96 focus:ring-primary focus:ring-2 outline-none'/>
-                <span className='text-xs'>Forget Password</span>
+                <label htmlFor='forget-modal' className='text-xs cursor-pointer' >Forget Password</label>
                 </div>
                 <button className='w-full bg-accent text-white py-2 rounded'>Login</button>
                 <div className='text-sm'>
