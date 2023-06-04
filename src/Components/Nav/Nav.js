@@ -1,11 +1,17 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IoIosMenu } from 'react-icons/io';
 import { RxCross2 } from 'react-icons/rx';
 import { AuthContext } from '../../Context/Auth.Context';
+import { list } from 'postcss';
 const Nav = () => {
     const [isDisplay, setIsDisplay] = useState(false)
     const { user , logout} = useContext(AuthContext)
+    const htmlTag = document.getElementById("main-element");
+    const [isDark, setIsDark] = useState(false)
+    useEffect(()=>{
+        isDark ? htmlTag.setAttribute("data-theme", "dark") : htmlTag.setAttribute("data-theme", "doctorstheme")
+    },[isDark, htmlTag])
     return (
         <div>
             <div className='flex justify-between items-center container mx-auto py-2 px-4 text-accent'>
@@ -79,6 +85,9 @@ const Nav = () => {
                                 <li>
                                     <Link to="/login">Login</Link>
                                 </li>
+                        }
+                        {
+                            <li className='cursor-pointer' onClick={()=> setIsDark(!isDark)}>{isDark ? "Light" : "Dark"}</li>
                         }
                     </ul>
                 </div>
